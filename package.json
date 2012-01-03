@@ -1,0 +1,10 @@
+{
+  "name": "backbone-test-example",
+  "version": "1.0.0",
+  "author": "Zach Williams",
+  "dependencies": {
+    "coffee-script": "1.x.x",
+    "vows": "0.6.x",
+    "zombie": "*"
+  }
+}
