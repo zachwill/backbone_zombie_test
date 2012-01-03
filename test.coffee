@@ -9,15 +9,15 @@ zombie = require 'zombie'
 
 site = 'http://documentcloud.github.com/backbone/examples/todos/index.html'
 
-vows.describe('Zombie tests on a Backbone app')
+vows.describe('Testing the Backbone.js Todos app')
 .addBatch
-  'Navigate a Todo list':
+  'when first visiting the site':
     topic: ->
       browser = new zombie(debug: true)
       browser.on 'error', (error) -> console.log error.stack
       browser.visit site, @callback
 
-    'Can see a todo list': (error, browser, status) ->
+    'we should see an empty todo list': (error, browser, status) ->
       html = browser.html('#todo-list')
       expected = '<ul id="todo-list"></ul>'
       assert.equal html, expected
