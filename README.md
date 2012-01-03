@@ -4,3 +4,13 @@ using [Vows](http://vowsjs.org/) and the
 
 Inspired by [this Stack Overflow
 question](http://stackoverflow.com/questions/7410920/).
+
+
+Usage
+-----
+
+Install the dependencies (if you don't already have them), and then
+simply run the tests.
+
+    npm install
+    vows test.coffee
