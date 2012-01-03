@@ -1,6 +1,6 @@
 ###
   A simple example Backbone.js test. Inspired by the following Stack Overflow
-  question: http://stackoverflow.com/questions/7410920/
+  question:  http://stackoverflow.com/questions/7410920/
 ###
 
 assert = require 'assert'
@@ -18,8 +18,8 @@ vows.describe('Zombie tests on a Backbone app')
       browser.visit site, @callback
 
     'Can see a todo list': (error, browser, status) ->
-      expected = '<ul id="todo-list"></ul>'
       html = browser.html('#todo-list')
+      expected = '<ul id="todo-list"></ul>'
       assert.equal html, expected
 
 .export(module)
