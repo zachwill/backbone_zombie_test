@@ -13,13 +13,17 @@ vows.describe('Testing the Backbone.js Todos app')
 .addBatch
   'when first visiting the site':
     topic: ->
-      browser = new zombie(debug: true)
+      browser = new zombie(debug: true, site: site)
       browser.on 'error', (error) -> console.log error.stack
-      browser.visit site, @callback
+      browser.visit '', @callback
 
     'we should see an empty todo list': (error, browser, status) ->
       html = browser.html('#todo-list')
       expected = '<ul id="todo-list"></ul>'
       assert.equal html, expected
+
+    'jQuery should be global function': (error, browser, status) ->
+      jquery = browser.evaluate('jQuery instanceof Function')
+      assert.ok jquery
 
 .export(module)
