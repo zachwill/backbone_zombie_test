@@ -14,3 +14,7 @@ simply run the tests.
 
     npm install
     vows test.coffee
+
+In order to see the specs, you can run the tests with the `--spec` flag.
+
+    vows test.coffee --spec
